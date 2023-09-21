@@ -159,6 +159,8 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "footer";
+@import "choose-color";
+@import "composition";
 
 // Підключення стилів окремих сторінок
 @import "home";

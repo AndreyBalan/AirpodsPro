@@ -29,6 +29,7 @@ body {
 .title {
     font-weight: 700;
     font-size: toRem(64);
+    margin-bottom: toRem(20);
     &_header {
         font-size: toRem(210);
         position: absolute;
@@ -51,5 +52,7 @@ body {
         position: relative;
         z-index: -1;
         transform: translate(toRem(-110), toRem(480));
+    }
+    &_hoose-color {
     }
 }

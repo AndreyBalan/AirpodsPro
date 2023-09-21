@@ -1,0 +1,26 @@
+.choose-color {
+    padding: toRem(45) 0 toRem(80);
+    text-align: center;
+    &__title {
+        font-size: toRem(36);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 auto;
+        margin-bottom: toRem(40);
+    }
+    &__text {
+        max-width: toRem(555);
+        margin: 0 auto;
+        margin-bottom: toRem(40);
+    }
+    &__list {
+        display: flex;
+        gap: toRem(40);
+        justify-content: center;
+    }
+    &__btn {
+        border-radius: 20px;
+        border: 1px solid #cdcdcd;
+        padding: toRem(25) toRem(35);
+    }
+}

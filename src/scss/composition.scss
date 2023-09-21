@@ -1,0 +1,20 @@
+.composition {
+    margin-bottom: toRem(140);
+    text-align: center;
+    &__text {
+        max-width: toRem(653);
+        margin: 0 auto toRem(80);
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        gap: toRem(100);
+    }
+    &__inner-text {
+        max-width: toRem(230);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
