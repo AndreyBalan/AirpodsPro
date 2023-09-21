@@ -1,0 +1,41 @@
+// Заголовки, загальні БЕМ блоки та інше...
+body {
+    font-family: "Inter", sans-serif;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 16px;
+}
+
+.btn {
+    padding: toRem(10) toRem(53) toRem(10) toRem(53);
+    border-radius: toRem(30);
+    background-color: #000;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s all;
+    border: 1px solid #000;
+
+    &:hover {
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        scale: 1.05;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: toRem(64);
+    &_header {
+        font-size: toRem(210);
+        position: absolute;
+        padding-top: toRem(105);
+    }
+    &--pod {
+        position: relative;
+        z-index: -1;
+    }
+}
