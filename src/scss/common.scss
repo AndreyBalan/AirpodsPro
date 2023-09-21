@@ -38,4 +38,18 @@ body {
         position: relative;
         z-index: -1;
     }
+    &--s {
+        display: inline-block;
+        transform: translateY(toRem(60));
+    }
+    &--m {
+        display: inline-block;
+        transform: translate(toRem(-22), toRem(320));
+    }
+    &--ax {
+        display: inline-block;
+        position: relative;
+        z-index: -1;
+        transform: translate(toRem(-110), toRem(480));
+    }
 }
