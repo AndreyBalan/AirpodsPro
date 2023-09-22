@@ -1,0 +1,24 @@
+.case {
+    padding: toRem(80) toRem(0) toRem(100);
+    background-color: #fafafa;
+    text-align: center;
+    &__subtitle {
+        max-width: toRem(825);
+        margin: 0 auto toRem(40);
+    }
+}
+.energy {
+    &__title {
+        padding-top: toRem(140);
+        margin-bottom: toRem(40);
+    }
+    &__num {
+        font-size: toRem(210);
+        font-weight: 700;
+        margin-bottom: toRem(40);
+    }
+    &__text {
+        max-width: toRem(400);
+        margin: 0 auto;
+    }
+}
