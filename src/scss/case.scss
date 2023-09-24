@@ -6,6 +6,9 @@
         max-width: toRem(825);
         margin: 0 auto toRem(40);
     }
+    &__img {
+        max-width: 100%;
+    }
 }
 .energy {
     &__title {
@@ -13,7 +16,7 @@
         margin-bottom: toRem(40);
     }
     &__num {
-        font-size: toRem(210);
+        @include adaptiveValue("font-size", 210, 120);
         font-weight: 700;
         margin-bottom: toRem(40);
     }

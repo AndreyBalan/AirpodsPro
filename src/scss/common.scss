@@ -28,12 +28,23 @@ body {
 
 .title {
     font-weight: 700;
-    font-size: toRem(64);
+    @include adaptiveValue("font-size", 64, 32);
     margin-bottom: toRem(20);
     &_header {
-        font-size: toRem(210);
+        font-size: toRem(190);
         position: absolute;
         padding-top: toRem(105);
+        @include adaptiveValue("font-size", 190, 32, 1, 1240);
+        @media (max-width: $pc) {
+            transform: none;
+            text-align: center;
+            left: 0;
+            right: 0;
+            padding-top: toRem(180);
+        }
+        @media (max-width: $mobile) {
+            padding-top: toRem(0);
+        }
     }
     &--pod {
         position: relative;
@@ -42,17 +53,34 @@ body {
     &--s {
         display: inline-block;
         transform: translateY(toRem(60));
+        @media (max-width: $pc) {
+            transform: translateY(toRem(60));
+        }
+        @media (max-width: $mobile) {
+            transform: none;
+        }
     }
     &--m {
         display: inline-block;
-        transform: translate(toRem(-22), toRem(320));
+        transform: translate(toRem(65), toRem(320));
+        @media (max-width: $pc) {
+            transform: translateY(toRem(180));
+        }
+        @media (max-width: $mobile) {
+            transform: none;
+        }
     }
     &--ax {
         display: inline-block;
         position: relative;
         z-index: -1;
-        transform: translate(toRem(-110), toRem(480));
-    }
-    &_hoose-color {
+        transform: translate(toRem(0), toRem(480));
+        @media (max-width: $pc) {
+            transform: translateY(toRem(230));
+            z-index: 1;
+        }
+        @media (max-width: $mobile) {
+            transform: none;
+        }
     }
 }

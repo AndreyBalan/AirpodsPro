@@ -4,13 +4,20 @@
     &__text {
         max-width: toRem(653);
         margin: 0 auto toRem(80);
+        @media (max-width: $mobile) {
+            margin-bottom: toRem(40);
+        }
     }
     &__inner {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: toRem(100);
         max-width: toRem(600);
         margin: 0 auto;
+        @media (max-width: $mobile) {
+            gap: toRem(50);
+        }
     }
     &__inner-text {
         max-width: toRem(230);
@@ -19,5 +26,8 @@
         flex-direction: column;
         justify-content: space-between;
         gap: toRem(15);
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
     }
 }

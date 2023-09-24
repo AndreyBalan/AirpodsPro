@@ -1,11 +1,20 @@
 .header {
     min-height: 100vh;
     position: relative;
+    @media (max-width: $mobile) {
+        min-height: 100%;
+    }
     &__top {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: toRem(40) 0;
+        @media (max-width: $mobile) {
+            padding: toRem(20) 0;
+            justify-content: center;
+            gap: toRem(15);
+        }
     }
     .logo {
         transition: 0.3s all;
@@ -16,15 +25,25 @@
     .menu {
         &__list {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 0 toRem(40);
             font-weight: 700;
+            @media (max-width: $mobile) {
+                justify-content: center;
+                gap: toRem(22);
+            }
         }
     }
+
     &__content-images {
         text-align: center;
         padding-bottom: toRem(50);
         padding-top: toRem(50);
+        @media (max-width: $mobile) {
+            padding-top: toRem(90);
+            padding-bottom: toRem(40);
+        }
         &::before {
             content: "";
             z-index: -2;
@@ -40,57 +59,59 @@
                 rgba(255, 255, 255, 0) 100%
             );
         }
+        img {
+            max-width: 100%;
+        }
     }
 }
 //Burger
-/*
-.icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: toRem(30);
-		height: toRem(18);
-		z-index: 5;
-		@media (any-hover: none) {
-			cursor: default;
-		}
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: toRem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - toRem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - toRem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - toRem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
-*/
+
+// .icon-menu {
+//     display: none;
+//     @media (max-width: $mobile) {
+//         display: block;
+//         position: relative;
+//         width: toRem(30);
+//         height: toRem(18);
+//         z-index: 5;
+//         @media (any-hover: none) {
+//             cursor: default;
+//         }
+//         span,
+//         &::before,
+//         &::after {
+//             content: "";
+//             transition: all 0.3s ease 0s;
+//             right: 0;
+//             position: absolute;
+//             width: 100%;
+//             height: toRem(2);
+//             background-color: #000;
+//         }
+//         &::before {
+//             top: 0;
+//         }
+//         &::after {
+//             bottom: 0;
+//         }
+//         span {
+//             top: calc(50% - toRem(1));
+//         }
+//         .menu-open & {
+//             span {
+//                 width: 0;
+//             }
+//             &::before,
+//             &::after {
+//             }
+//             &::before {
+//                 top: calc(50% - toRem(1));
+//                 transform: rotate(-45deg);
+//             }
+//             &::after {
+//                 bottom: calc(50% - toRem(1));
+//                 transform: rotate(45deg);
+//             }
+//         }
+//     }
+// }

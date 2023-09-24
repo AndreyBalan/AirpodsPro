@@ -9,16 +9,36 @@
     }
     &__bottom {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-top: toRem(90);
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: toRem(30);
+            margin-top: toRem(40);
+        }
     }
     &__list {
         display: flex;
         gap: toRem(40);
         width: toRem(420);
+        flex-wrap: wrap;
         &:last-child {
             justify-content: flex-end;
+            @media (max-width: $mobile) {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            width: 30%;
+        }
+        @media (max-width: $mobile) {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
     }
 }
