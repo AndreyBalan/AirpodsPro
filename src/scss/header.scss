@@ -53,9 +53,35 @@
             right: 0;
             bottom: 0;
             width: 100%;
+        }
+        &:has(.color--blue.content-item--active)::before {
             background: linear-gradient(
                 180deg,
                 #c3d5e6 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+        &:has(.color--red.content-item--active)::before {
+            background: linear-gradient(
+                180deg,
+                #f6deda 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+        &:has(.color--white.content-item--active)::before {
+            background: #fff;
+        }
+        &:has(.color--green.content-item--active)::before {
+            background: linear-gradient(
+                180deg,
+                #e0eedd 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+        &:has(.color--black.content-item--active)::before {
+            background: linear-gradient(
+                180deg,
+                #858485 0%,
                 rgba(255, 255, 255, 0) 100%
             );
         }

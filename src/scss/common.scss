@@ -84,3 +84,9 @@ body {
         }
     }
 }
+.content-item {
+    display: none;
+    &--active {
+        display: inline-block;
+    }
+}
