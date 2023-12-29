@@ -34,7 +34,7 @@ body {
         font-size: toRem(190);
         position: absolute;
         padding-top: toRem(105);
-        @include adaptiveValue("font-size", 190, 32, 1, 1240);
+        @include adaptiveValue("font-size", 190, 32);
         @media (max-width: $pc) {
             transform: none;
             text-align: center;
